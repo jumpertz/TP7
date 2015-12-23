@@ -1,5 +1,7 @@
 package projetoffresstage;
 
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -187,7 +189,24 @@ public class MenuCreationEntreprise extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAnnulerActionPerformed
 
     private void btnEnvoyerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnvoyerActionPerformed
+    if(txtNomEntreprise.getText().isEmpty() && txtAdresseNumeroRue.getText().isEmpty() &&
+            txtCodePostal.getText().isEmpty() && txtVille.getText().isEmpty() && 
+            txtMailContact.getText().isEmpty() && txtTelephoneContact.getText().isEmpty() &&
+            txtSecteurActiviteEntreprise.getText().isEmpty()){ 
         
+        Entreprise e = new Entreprise (txtNomEntreprise.getText(),
+                                      txtAdresseNumeroRue.getText(),
+                                      txtCodePostal.getText(),
+                                      txtVille.getText(),
+                                      txtMailContact.getText(),
+                                      txtTelephoneContact.getText(),
+                                      txtSecteurActiviteEntreprise.getText());
+          MainProjet.lesEntreprises.add(e);
+          JOptionPane.showMessageDialog(rootPane, "Ajout Réussi", "Message de confirmation", JOptionPane.INFORMATION_MESSAGE);
+    }
+    else{
+        JOptionPane.showMessageDialog(rootPane, "veuillez reéssayer l'ajout!", "Message d'erreur", JOptionPane.INFORMATION_MESSAGE);
+    }
     }//GEN-LAST:event_btnEnvoyerActionPerformed
 
     /**

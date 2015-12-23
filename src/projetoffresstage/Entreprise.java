@@ -10,23 +10,25 @@ package projetoffresstage;
  * @author jeremy
  */
 public class Entreprise {
-    private int raisonSociale;
+    private String raisonSociale;
     private String adresseVilleEntreprise;
     private String adresseRueEntreprise;
     private String adresseCodePostalEntreprise;
+    private String mailEntreprise;
     private String telEntreprise;
     private String secteurActivité;
 
-    public Entreprise(int raisonSociale, String adresseVilleEntreprise, String adresseRueEntreprise, String adresseCodePostalEntreprise, String telEntreprise, String secteurActivité) {
+    public Entreprise(String raisonSociale, String adresseVilleEntreprise, String adresseRueEntreprise, String adresseCodePostalEntreprise,String mailEntreprise, String telEntreprise, String secteurActivité) {
         this.raisonSociale = raisonSociale;
         this.adresseVilleEntreprise = adresseVilleEntreprise;
         this.adresseRueEntreprise = adresseRueEntreprise;
         this.adresseCodePostalEntreprise = adresseCodePostalEntreprise;
+        this.mailEntreprise = mailEntreprise;
         this.telEntreprise = telEntreprise;
         this.secteurActivité = secteurActivité;
     }
 
-    public int getRaisonSociale() {
+    public String getRaisonSociale() {
         return raisonSociale;
     }
 
@@ -41,6 +43,10 @@ public class Entreprise {
     public String getAdresseCodePostalEntreprise() {
         return adresseCodePostalEntreprise;
     }
+    
+    public String getMailEntreprise() {
+        return mailEntreprise;
+    }
 
     public String getTelEntreprise() {
         return telEntreprise;
@@ -50,7 +56,7 @@ public class Entreprise {
         return secteurActivité;
     }
 
-    public void setRaisonSociale(int raisonSociale) {
+    public void setRaisonSociale(String raisonSociale) {
         this.raisonSociale = raisonSociale;
     }
 
@@ -64,6 +70,10 @@ public class Entreprise {
 
     public void setAdresseCodePostalEntreprise(String adresseCodePostalEntreprise) {
         this.adresseCodePostalEntreprise = adresseCodePostalEntreprise;
+    }
+    
+    public void setMailEntreprise(String mailEntreprise) {
+        this.mailEntreprise = mailEntreprise;
     }
 
     public void setTelEntreprise(String telEntreprise) {
