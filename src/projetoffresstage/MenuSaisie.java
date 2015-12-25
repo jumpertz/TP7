@@ -87,6 +87,11 @@ public class MenuSaisie extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtaDescriptifOffre);
 
         btnEnvoyerStage.setText("Envoyer");
+        btnEnvoyerStage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnvoyerStageActionPerformed(evt);
+            }
+        });
 
         btnAnnulerOffreStage.setText("Annuler");
         btnAnnulerOffreStage.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +113,7 @@ public class MenuSaisie extends javax.swing.JFrame {
                 .addComponent(lblDureeStage)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtDureeStage, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jcbMenuSaisieLayout.createSequentialGroup()
                 .addGroup(jcbMenuSaisieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jcbMenuSaisieLayout.createSequentialGroup()
@@ -212,6 +217,11 @@ public class MenuSaisie extends javax.swing.JFrame {
     private void btnAnnulerOffreStageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnnulerOffreStageActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnAnnulerOffreStageActionPerformed
+
+    private void btnEnvoyerStageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnvoyerStageActionPerformed
+        String list1Field = (String)this.itmNomEntreprise.getSelectedItem(); 
+        String list2Field = (String)this.jcbDomaineOffre.getSelectedItem();
+    }//GEN-LAST:event_btnEnvoyerStageActionPerformed
 
     /**
      * @param args the command line arguments

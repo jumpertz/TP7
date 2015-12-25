@@ -16,6 +16,16 @@ public class MenuConsulter extends javax.swing.JFrame {
      */
     public MenuConsulter() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
+        txtNomEntreprise.setEditable(false);
+        txtVilleStage.setEditable(false);
+        txtEmailContact.setEditable(false);
+        txtDomaineOffre.setEditable(false);
+        txtLibelleOffre.setEditable(false);
+        txtDateDebutStage.setEditable(false);
+        txtDureeStage.setEditable(false);
+        txtaDescriptifOffre.setEditable(false);
     }
 
     /**

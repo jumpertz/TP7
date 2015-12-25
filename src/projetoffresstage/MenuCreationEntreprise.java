@@ -1,14 +1,13 @@
 package projetoffresstage;
 
 import javax.swing.JOptionPane;
+import static projetoffresstage.MainProjet.lesEntreprises;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author jeremy
@@ -189,24 +188,128 @@ public class MenuCreationEntreprise extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAnnulerActionPerformed
 
     private void btnEnvoyerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnvoyerActionPerformed
-    if(txtNomEntreprise.getText().isEmpty() && txtAdresseNumeroRue.getText().isEmpty() &&
-            txtCodePostal.getText().isEmpty() && txtVille.getText().isEmpty() && 
-            txtMailContact.getText().isEmpty() && txtTelephoneContact.getText().isEmpty() &&
-            txtSecteurActiviteEntreprise.getText().isEmpty()){ 
-        
-        Entreprise e = new Entreprise (txtNomEntreprise.getText(),
-                                      txtAdresseNumeroRue.getText(),
-                                      txtCodePostal.getText(),
-                                      txtVille.getText(),
-                                      txtMailContact.getText(),
-                                      txtTelephoneContact.getText(),
-                                      txtSecteurActiviteEntreprise.getText());
-          MainProjet.lesEntreprises.add(e);
-          JOptionPane.showMessageDialog(rootPane, "Ajout Réussi", "Message de confirmation", JOptionPane.INFORMATION_MESSAGE);
-    }
-    else{
-        JOptionPane.showMessageDialog(rootPane, "veuillez reéssayer l'ajout!", "Message d'erreur", JOptionPane.INFORMATION_MESSAGE);
-    }
+
+        if(this.txtNomEntreprise.getText().compareTo("") != 0 && this.txtAdresseNumeroRue.getText().compareTo("") != 0 && this.txtCodePostal.getText().compareTo("") != 0 && this.txtVille.getText().compareTo("") != 0 && this.txtMailContact.getText().compareTo("") != 0 && this.txtTelephoneContact.getText().compareTo("") != 0 && this.txtSecteurActiviteEntreprise.getText().compareTo("") != 0)
+        {
+            String nomEntreprise = "";
+            String rueEntreprise = "";
+            String cpEntreprise = "";
+            String villeEntreprise = "";
+            String emailEntreprise = "";
+            String telEntreprise = "";
+            String secteurActiviteEntreprise = "";
+            boolean error = false;
+            
+            // Nom de l'entreprise
+            try
+            {
+                nomEntreprise = txtNomEntreprise.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"Le nom est invalide !","Création Entreprise",1);
+                error = true;
+            }
+            
+            // Rue de l'entreprise
+            try
+            {
+                rueEntreprise = txtAdresseNumeroRue.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"La rue est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Code postal de l'entreprise
+            try
+            {
+                cpEntreprise = txtCodePostal.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"Le code postal est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Ville de l'entreprise
+            try
+            {
+                villeEntreprise = txtVille.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"La ville est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // L'adresse email de l'entreprise
+            try
+            {
+                emailEntreprise = txtMailContact.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"L'email est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Numéro de téléphone de l'entreprise
+            try
+            {
+                telEntreprise = this.txtTelephoneContact.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"Le numéro de téléphone est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Secteur d'activité de l'entreprise
+            try
+            {
+                secteurActiviteEntreprise = txtSecteurActiviteEntreprise.getText();
+            }
+            catch(NumberFormatException e)
+            {
+                JOptionPane.showMessageDialog(null,"Le secteur d'activité est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Longueur du code postal de l'entreprise
+            if(cpEntreprise.length() < 5)
+            {
+                JOptionPane.showMessageDialog(null,"Le code postal est invalide !","Création entreprise",1);
+                error = true;
+            }
+            
+            // Longueur du numéro de téléphone l'entreprise
+            if(telEntreprise.length() < 10)
+            {
+                JOptionPane.showMessageDialog(null,"Le numéro de téléphone est invalide !","Création entreprise",1);
+                error = true;
+            }
+
+            // Si aucune erreur de saisie n'est détéctée
+            if(error == false)
+            {
+                //Entreprise e = new Entreprise(nomEntreprise, rueEntreprise, cpEntreprise, villeEntreprise, emailEntreprise, telEntreprise, secteurActiviteEntreprise);
+                MainProjet.lesEntreprises.add(new Entreprise(nomEntreprise, 
+                                                  rueEntreprise, 
+                                                  cpEntreprise, 
+                                                  villeEntreprise, 
+                                                  emailEntreprise, 
+                                                  telEntreprise, 
+                                                  secteurActiviteEntreprise));
+            
+                
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Veuillez remplir tous les champs !","Création Propriétaire",1);
+        }
     }//GEN-LAST:event_btnEnvoyerActionPerformed
 
     /**
