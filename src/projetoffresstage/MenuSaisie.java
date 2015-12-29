@@ -16,6 +16,14 @@ public class MenuSaisie extends javax.swing.JFrame {
      */
     public MenuSaisie() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
+        // Construction du menu déroulant de la liste des entreprises
+        itmNomEntreprise.addItem("");
+        for(Entreprise uneEntreprise : MainProjet.lesEntreprises)
+        {
+            itmNomEntreprise.addItem(uneEntreprise);
+        }
     }
 
     /**

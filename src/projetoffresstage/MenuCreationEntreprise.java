@@ -292,7 +292,7 @@ public class MenuCreationEntreprise extends javax.swing.JFrame {
             }
 
             // Si aucune erreur de saisie n'est détéctée
-            if(error == false)
+            if(error == true)
             {
                 //Entreprise e = new Entreprise(nomEntreprise, rueEntreprise, cpEntreprise, villeEntreprise, emailEntreprise, telEntreprise, secteurActiviteEntreprise);
                 MainProjet.lesEntreprises.add(new Entreprise(nomEntreprise, 
