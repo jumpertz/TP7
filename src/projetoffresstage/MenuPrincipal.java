@@ -80,7 +80,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnlGestionOffresStagesLayout.setHorizontalGroup(
             pnlGestionOffresStagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlGestionOffresStagesLayout.createSequentialGroup()
-                .addContainerGap(212, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblGestionOffresStages)
                 .addGap(207, 207, 207))
             .addGroup(pnlGestionOffresStagesLayout.createSequentialGroup()
@@ -89,10 +89,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(lblDescartesEtLesPros)
                     .addGroup(pnlGestionOffresStagesLayout.createSequentialGroup()
                         .addComponent(btnCreerEntreprise)
-                        .addGap(92, 92, 92)
-                        .addGroup(pnlGestionOffresStagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAnnuler, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnSaisieOffre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(54, 54, 54)
+                        .addGroup(pnlGestionOffresStagesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSaisieOffre))
+                        .addGap(38, 38, 38)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnConsulterOffres)
                 .addGap(35, 35, 35))
@@ -109,9 +110,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnCreerEntreprise)
                     .addComponent(btnSaisieOffre)
                     .addComponent(btnConsulterOffres))
-                .addGap(73, 73, 73)
+                .addGap(64, 64, 64)
                 .addComponent(btnAnnuler)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

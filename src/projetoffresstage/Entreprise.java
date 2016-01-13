@@ -83,6 +83,12 @@ public class Entreprise {
     public void setSecteurActivité(String secteurActivité) {
         this.secteurActivité = secteurActivité;
     }
+
+    @Override
+    public String toString() {
+        return "Entreprise{" + "raisonSociale=" + raisonSociale + ", adresseVilleEntreprise=" + adresseVilleEntreprise + ", adresseRueEntreprise=" + adresseRueEntreprise + ", adresseCodePostalEntreprise=" + adresseCodePostalEntreprise + ", mailEntreprise=" + mailEntreprise + ", telEntreprise=" + telEntreprise + ", secteurActivit\u00e9=" + secteurActivité + '}';
+    }
+    
     
     
 }
