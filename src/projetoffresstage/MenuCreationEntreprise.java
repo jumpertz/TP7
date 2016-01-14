@@ -295,8 +295,9 @@ public class MenuCreationEntreprise extends javax.swing.JFrame {
             }
 
             // Si aucune erreur de saisie n'est détéctée
-            if(error == true)
+            if(!error)
             {
+                System.out.println("ajout");
                 //Entreprise e = new Entreprise(nomEntreprise, rueEntreprise, cpEntreprise, villeEntreprise, emailEntreprise, telEntreprise, secteurActiviteEntreprise);
                 MainProjet.lesEntreprises.add(new Entreprise(nomEntreprise, 
                                                   rueEntreprise, 
@@ -307,6 +308,7 @@ public class MenuCreationEntreprise extends javax.swing.JFrame {
                                                   secteurActiviteEntreprise));
                 JOptionPane.showMessageDialog(null,"entreprise crée" ,"Création entreprise",1);
                 //JOptionPane.showMessageDialog(null,"Entreprise crée","Création entreprise",1);
+                this.dispose();
             
                 
             }
