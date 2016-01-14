@@ -9,7 +9,7 @@ public class MainProjet {
     /**
      * @param args the command line arguments
      */
-    public static ArrayList<String>lesOffres;
+    public static ArrayList<OffreStage>lesOffres = new ArrayList<OffreStage>();
     public static ArrayList<Entreprise>lesEntreprises = new ArrayList<Entreprise>();
     public static void main(String[] args) {
         
